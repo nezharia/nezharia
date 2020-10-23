@@ -65,7 +65,7 @@ body{
         left: 50%;
         transform: translate(-50% , -50%);
         font-size: 19px;
-        font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     .i-header-btn{
         position: absolute;
@@ -99,5 +99,91 @@ body{
     }
     .i-header-btn-inner span:nth-child(3){
         top:100%;
+    }
+    .i-header-nav::before{
+        position: fixed;
+        background-color: #018ccd;
+        transition: width 0.8s
+        cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+        top : 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        content: "";
+    }
+    .i-header-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        transition: all 0.8s
+        cubic-bezier(0.19, 1, 0.22, 1);
+        padding: 92px 5% 5% 5%;
+        width: 90%;
+        height: 100%;
+        min-height: 100%;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+    }
+    .i-header-nav::-webkit-scrollbar{
+         display:none;
+    }
+    .i-header-nav-deco{
+        /* position: fixed; */
+        top: 0;
+        left: 0%;
+        width: 100%;
+        /* overflow: hidden; */
+    }
+    .i-header-nav-deco::before{
+        background-color: #fff001;
+        opacity: 0.5;
+        position: absolute;
+        top: -20px;
+        transform: skewX(45deg);
+        transform-origin: top left;
+        height: 100vh;
+        content: "";
+        left: -80%;
+        width: 60%;
+    }
+    .i-header-nav-inner{
+        position: relative;
+        padding-bottom: 5%;
+        width: 100%;
+        min-height: 100%;
+    }
+    .i-header-nav-list{
+        color: #000;
+        font-size: 14vw;
+        letter-spacing: -0.15em;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bolder;
+
+    }
+    .i-header-nav-list > li{
+        cursor: pointer;
+        position: relative;
+    }
+    .i-header-nav-list li+li{
+        margin-top: 4.8%;
+    }
+    .i-header-nav-link{
+        color: #fff;
+        font-size: 10vw;
+        margin-top: 8%;
+        font-weight: bolder;
+    }
+    .i-header-nav-link li+li {
+        margin-top: 4.2%;
+    }
+    .i-header-nav-link > li > p{
+        -webkit-text-stroke: 1px #fff;
+        color: rgba(155, 155, 155, 0)
+    }
+    .i-header-nav-link > li > a{
+        width: 100%;
+        height: 100%;
     }
 }
